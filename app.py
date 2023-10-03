@@ -90,7 +90,7 @@ tools = [tool]
 # define the prompt
 system_message = SystemMessage(
         content=(
-            "Provide answers only from 'Financial Advisers Act 2001.pdf'; do not provide answers from other sources."
+            "Provide answers only from Financial Advisers Act 2001.pdf; do not provide answers from other sources."
             "Always provide the file name as source along with answer"
             "If you don't find the information in the documents, say you don't know the answer based on the documents"
             
