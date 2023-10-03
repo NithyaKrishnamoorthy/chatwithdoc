@@ -9,7 +9,7 @@ from langchain.document_loaders import WebBaseLoader
 
 # used to create the retriever
 from langchain.text_splitter import CharacterTextSplitter
-from langchain.vectorstores import FAISS
+#from langchain.vectorstores import FAISS
 from langchain.embeddings import OpenAIEmbeddings
 from llama_index import SimpleDirectoryReader
 
