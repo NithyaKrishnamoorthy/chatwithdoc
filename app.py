@@ -98,7 +98,6 @@ system_message = SystemMessage(
 prompt_template = OpenAIFunctionsAgent.create_prompt(
         system_message=system_message,
         extra_prompt_messages=[MessagesPlaceholder(variable_name=memory_key)]
-    ,return_source_documents=True
     )
 
 # instantiate the large language model
@@ -122,6 +121,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             response = agent_executor({"input": prompt})
-            st.write(response["output"])
+            #st.write(response["output"])
+            st.write(response)
             message = {"role": "assistant", "content": response["output"]}
             st.session_state.messages.append(message) # Add response to message
