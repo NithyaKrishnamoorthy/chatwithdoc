@@ -98,10 +98,11 @@ system_message = SystemMessage(
 prompt_template = OpenAIFunctionsAgent.create_prompt(
         system_message=system_message,
         extra_prompt_messages=[MessagesPlaceholder(variable_name=memory_key)]
+    ,return_source_documents=True
     )
 
 # instantiate the large language model
-llm = ChatOpenAI(temperature = 0, openai_api_key=openai_api_key,return_source_documents=True)
+llm = ChatOpenAI(temperature = 0, openai_api_key=openai_api_key)
 
 # instantiate agent
 agent = OpenAIFunctionsAgent(llm=llm, tools=tools, prompt=prompt_template)
