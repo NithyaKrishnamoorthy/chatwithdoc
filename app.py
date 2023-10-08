@@ -104,7 +104,7 @@ prompt_template = OpenAIFunctionsAgent.create_prompt(
     )
 
 # instantiate the large language model
-llm = ChatOpenAI(temperature = 0, openai_api_key=openai_api_key)
+llm = ChatOpenAI(temperature = 0, openai_api_key=openai_api_key,return_source_documents=True)
 
 # instantiate agent
 agent = OpenAIFunctionsAgent(llm=llm, tools=tools, prompt=prompt_template)
