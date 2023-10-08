@@ -121,7 +121,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
             response = agent_executor({"input": prompt})
-            #st.write(response["output"])
-            st.write(response)
+            st.write(response["output"])
+            #st.write(response)
             message = {"role": "assistant", "content": response["output"]}
             st.session_state.messages.append(message) # Add response to message
