@@ -45,7 +45,7 @@ if "memory" not in st.session_state.keys():
 # Initialize the chat message history
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
-        {"role": "assistant", "content": "Ask me a question from the below documents!\n\n1. MU 72/19 (17 SEP 2019) - LIA GUIDELINES ON THE USE OF INCENTIVES IN THE RECRUITMENT OF FINANCIAL ADVISORY REPRESENTATIVES\n2. Notice FAAN13 Minimum Entry and Examination Requirements for Representatives of Licensed Financial A\n"}
+        {"role": "assistant", "content": "Ask me a question from the below documents!\n\n 1. MU 72/19 (17 SEP 2019) - LIA GUIDELINES ON THE USE OF INCENTIVES IN THE RECRUITMENT OF FINANCIAL ADVISORY REPRESENTATIVES\n2. Notice FAAN13 Minimum Entry and Examination Requirements for Representatives of Licensed Financial A\n"}
     ]
     
     
