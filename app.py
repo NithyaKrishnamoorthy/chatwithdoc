@@ -33,7 +33,7 @@ from langchain.agents import AgentExecutor
 openai_api_key = st.secrets.openai_key
 
 # add a heading for your app.
-st.header("Chat with the LLM Agents blog 💬 📚")
+st.header("Chat with PDF docs 💬 📚")
 
 # Initialize the memory
 # This is needed for both the memory and the prompt
@@ -45,8 +45,11 @@ if "memory" not in st.session_state.keys():
 # Initialize the chat message history
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [
-        {"role": "assistant", "content": "Ask me a question about LLM based agents!"}
+        {"role": "assistant", "content": "Ask me a question about the following documents!"}
     ]
+    st.write(" 1. MU 72/19 (17 SEP 2019) - LIA GUIDELINES ON THE USE OF INCENTIVES IN THE RECRUITMENT OF FINANCIAL ADVISORY REPRESENTATIVES\n")
+    st.write(" 2. Notice FAAN13 Minimum Entry and Examination Requirements for Representatives of Licensed Financial A\n")
+    
 
 # create the document database
 @st.cache_resource(show_spinner=False)
