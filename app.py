@@ -96,6 +96,7 @@ system_message = SystemMessage(
             "Always provide the file name as source along with answer and provide the page number and section"
             "If you don't find the information in the documents, say you don't know the answer based on the documents" 
             "Example prompt and answer - what is the definition of mass recruitment? The definition of mass recruitment is the recruitment of 30 or more representatives from the same insurer or FA firm within a 60-day period. It includes any incentive schemes offered to representatives that are pegged to sales target requirements with a clawback mechanism. This definition is mentioned in the document MU 7219.pdf on page 2."
+            "Support your answer with specific extracts or excerpts from the document"
         )
 )
 prompt_template = OpenAIFunctionsAgent.create_prompt(
