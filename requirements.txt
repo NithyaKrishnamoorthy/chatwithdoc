@@ -4,3 +4,4 @@ llama-index
 nltk
 pypdf
 faiss-cpu
+langchain
